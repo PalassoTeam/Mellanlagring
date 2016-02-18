@@ -15,7 +15,9 @@ create table avslut
     nyrednr nchar(4),
     uppbloen nchar(1),
     kapan nchar(1),
-    ato nchar(4)
+    ato nchar(4),
+    overtids_inl nchar(1),
+    anstnr nchar(10)
  CONSTRAINT [PK_avslut] PRIMARY KEY CLUSTERED 
 (
 	[rednr] ASC,

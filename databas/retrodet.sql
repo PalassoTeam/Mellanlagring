@@ -9,7 +9,7 @@ create table retrodet
     skap_lonper nchar(4),
     skap_lonlpnr smallint,
     lart nchar(4),
-    faktorvarde decimal(3,2),
+    faktorvarde decimal(5,2),
     korr nchar(1),
     lonhfm nchar(8),
     lonhtm nchar(8),

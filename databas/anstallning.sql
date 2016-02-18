@@ -5,7 +5,7 @@ create table anstallning
     anstlpnr nchar(1) not null ,
     anstfm nchar(8) not null ,
     retrodat nchar(8),
-    tmkx nchar(36),
+    tmkx nvarchar(255),
     loggdatum nchar(8),
     senand nchar(20),
     lart nchar(4),
@@ -16,7 +16,7 @@ create table anstallning
     lonebetfl nchar(1),
     anstomf decimal(5,2),
     forgrp nchar(1),
-    faktorvarde decimal(3,2),
+    faktorvarde decimal(4,2),
     semtal decimal(5,2),
     arbetsort nchar(4),
     retrokod nchar(1),
@@ -26,7 +26,11 @@ create table anstallning
     arsarbetstid smallint,
     veckarbtid decimal(4,2),
     semkod nchar(3),
-    dubbelanst smallint
+    dubbelanst smallint,
+    valutakod nchar(3),
+    total_lonesumma decimal(10,2),
+    vikarie_for nchar(36),
+    regelsamid nchar(3)
   );
   
 GO

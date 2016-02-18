@@ -8,7 +8,7 @@ create table histlonh
     lonhfm nchar(8),
     lonhtm nchar(8),
     lart nchar(4),
-    faktorvarde decimal(3,2),
+    faktorvarde decimal(4,2),
     korr nchar(1),
     antal decimal(6,2),
     apris decimal(6,2),

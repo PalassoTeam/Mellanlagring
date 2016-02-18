@@ -12,7 +12,9 @@ CREATE TABLE avvik_larttext
 	[proc]               decimal(5,2) NULL,
 	straff               nchar(2) NULL,
 	status_fsk           smallint NULL,
-	lonberak_lopnr       smallint NULL
+	lonberak_lopnr       smallint NULL,
+	ledighet_startar     nchar(4),
+	barn_lopnr           smallint
 );
 
 GO

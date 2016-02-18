@@ -25,7 +25,9 @@ create table redenhet
     direktutbet smallint,
     bank nvarchar(32),
     lonespec nvarchar(32),
-    ind_histkontr nchar(1)
+    ind_histkontr nchar(1),
+	ind_valutaber nchar(1),
+	utdata_per_rednr nchar(1)
   );
   
   GO

@@ -64,7 +64,10 @@ create table personack
     utsandningstid nchar(1),
     kodgul nchar(1),
     forbindelsenr nchar(20),
-    ku_flag nchar(1)
+    ku_flag nchar(1),
+	lonespec nchar(1),
+	hogrisk_from nchar(8),
+	hogrisk_tom nchar(8)
   );
   
   GO

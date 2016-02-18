@@ -34,7 +34,7 @@ create table lonartkat
     kat_lapension nchar(1),
     kat_laack1 nchar(1),
     kat_laack2 nchar(1),
-    kat_laack3 nchar(2),
+    kat_laack3 decimal(5,2),
     kat_labciy nchar(1),
     kat_latidsbegr nchar(5),
     kat_semdisk decimal(5,0),
@@ -54,7 +54,11 @@ create table lonartkat
     forskottflag smallint,
     dubbelanst smallint,
     dubbelfordel smallint,
-    ejnetto nchar(1)
+    ejnetto nchar(1),
+	auto_attest nchar(1),
+	fortr_arb_tid nchar(1),
+	overtids_inl nchar(1),
+	sammanslagning smallint
   );
 --create unique index lonartkatid on lonartkat (kat_rednr,kat_lart,kat_giltdat);
 --create index kat_lart on lonartkat (kat_lart);

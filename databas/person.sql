@@ -8,9 +8,9 @@ create table person
     adress nchar(36),
     pnum nchar(5),
     pans nchar(20),
-    telbos nchar(12),
+    telbos nchar(20),
     telarb nchar(20),
-    telmob nchar(12),
+    telmob nchar(20),
     telfax nchar(12),
     land nchar(36),
     landkod nchar(3),
@@ -20,7 +20,9 @@ create table person
     epost_annan nvarchar(60),
     signatur nchar(4),
     medborgarskapkod nchar(3),
-    medborgarskapkod2 nchar(3)
+    medborgarskapkod2 nchar(3),
+	tidigare_namne nchar(36),
+	telmob_annan nchar(20)
   );
   
 --create unique index penr on person (penr);
