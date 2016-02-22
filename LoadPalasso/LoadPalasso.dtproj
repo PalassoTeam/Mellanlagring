@@ -47,5 +47,50 @@
       <FullPath>load_anstallning.dtsx</FullPath>
       <References />
     </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadAvslut.dtsx</Name>
+      <FullPath>LoadAvslut.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadAvvik_larttext.dtsx</Name>
+      <FullPath>LoadAvvik_larttext.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadHistlon.dtsx</Name>
+      <FullPath>LoadHistlon.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadHistovr.dtsx</Name>
+      <FullPath>LoadHistovr.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadLonartKat_ro.dtsx</Name>
+      <FullPath>LoadLonartKat_ro.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadPerson.dtsx</Name>
+      <FullPath>LoadPerson.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadPersonAck.dtsx</Name>
+      <FullPath>LoadPersonAck.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadRetroDet.dtsx</Name>
+      <FullPath>LoadRetroDet.dtsx</FullPath>
+      <References />
+    </DtsPackage>
+    <DtsPackage FormatVersion="3">
+      <Name>LoadTabKat.dtsx</Name>
+      <FullPath>LoadTabKat.dtsx</FullPath>
+      <References />
+    </DtsPackage>
   </DTSPackages>
 </Project>
