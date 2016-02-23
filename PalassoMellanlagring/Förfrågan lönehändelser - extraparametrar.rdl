@@ -16,11 +16,11 @@
           <QueryParameter Name="@personnummer">
             <Value>=Parameters!personnummer.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@loneperiod">
-            <Value>=Parameters!loneperiod.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@redovisningsenhet">
             <Value>=Parameters!redovisningsenhet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@loneperiod">
+            <Value>=Parameters!loneperiod.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@lonehandelsedatumfrom">
             <Value>=Parameters!lonehandelsedatumfrom.Value</Value>
@@ -85,7 +85,7 @@
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="À_pris">
-          <DataField>À pris</DataField>
+          <DataField>À-pris</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
         </Field>
         <Field Name="Rapporteringsmånad">

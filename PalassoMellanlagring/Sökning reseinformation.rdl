@@ -2,8 +2,8 @@
 <Report xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:cl="http://schemas.microsoft.com/sqlserver/reporting/2010/01/componentdefinition" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/reportdefinition">
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
-    <DataSource Name="MellanLagring_Palasso">
-      <DataSourceReference>MellanLagring_Palasso</DataSourceReference>
+    <DataSource Name="Palasso">
+      <DataSourceReference>Palasso</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>071ef73e-57aa-42e6-b793-2f63a1609049</rd:DataSourceID>
     </DataSource>
@@ -11,7 +11,7 @@
   <DataSets>
     <DataSet Name="SokningReseinformation">
       <Query>
-        <DataSourceName>MellanLagring_Palasso</DataSourceName>
+        <DataSourceName>Palasso</DataSourceName>
         <QueryParameters>
           <QueryParameter Name="@personnummer">
             <Value>=Parameters!personnummer.Value</Value>
@@ -38,7 +38,7 @@
         </Field>
         <Field Name="Resa_from">
           <DataField>Resa from</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Redovisningsnummer">
           <DataField>Redovisningsnummer</DataField>
@@ -46,11 +46,15 @@
         </Field>
         <Field Name="Resa_tom">
           <DataField>Resa tom</DataField>
-          <rd:TypeName>System.DateTime</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="ReseID">
           <DataField>ReseID</DataField>
-          <rd:TypeName>System.Int32</rd:TypeName>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Meddelande">
+          <DataField>Meddelande</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
       </Fields>
     </DataSet>
@@ -218,7 +222,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>3.22866cm</Size>
+                        <Size>1.50887cm</Size>
                         <CellContents>
                           <Textbox Name="Textbox271">
                             <CanGrow>true</CanGrow>
@@ -227,7 +231,7 @@
                               <Paragraph>
                                 <TextRuns>
                                   <TextRun>
-                                    <Value>Redovisningsnummer</Value>
+                                    <Value>Rednr</Value>
                                     <Style>
                                       <FontSize>7pt</FontSize>
                                     </Style>
@@ -257,7 +261,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>4.13359cm</Size>
+                            <Size>5.57585cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox2">
                                 <CanGrow>true</CanGrow>
@@ -378,7 +382,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>2.53872cm</Size>
+                                        <Size>2.56249cm</Size>
                                         <CellContents>
                                           <Textbox Name="Textbox109">
                                             <CanGrow>true</CanGrow>
@@ -483,7 +487,7 @@
                   <TablixMembers>
                     <TablixMember>
                       <TablixHeader>
-                        <Size>3.22866cm</Size>
+                        <Size>1.50887cm</Size>
                         <CellContents>
                           <Textbox Name="Redovisningsnummer">
                             <CanGrow>true</CanGrow>
@@ -518,7 +522,7 @@
                       <TablixMembers>
                         <TablixMember>
                           <TablixHeader>
-                            <Size>4.13359cm</Size>
+                            <Size>5.57585cm</Size>
                             <CellContents>
                               <Textbox Name="Textbox253">
                                 <CanGrow>true</CanGrow>
@@ -630,7 +634,7 @@
                                   <TablixMembers>
                                     <TablixMember>
                                       <TablixHeader>
-                                        <Size>2.53872cm</Size>
+                                        <Size>2.56249cm</Size>
                                         <CellContents>
                                           <Textbox Name="ReseID">
                                             <CanGrow>true</CanGrow>
@@ -677,58 +681,207 @@
                 </TablixMember>
               </TablixMembers>
             </TablixRowHierarchy>
+            <NoRowsMessage>Det finns ingen data...</NoRowsMessage>
             <DataSetName>SokningReseinformation</DataSetName>
+            <Top>0.9525cm</Top>
             <Left>0.00003cm</Left>
             <Height>1.12062cm</Height>
-            <Width>17.99597cm</Width>
+            <Width>17.74221cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
             </Style>
           </Tablix>
-          <Textbox Name="Textbox4">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Personnummer:</Value>
+          <Rectangle Name="Rectangle1">
+            <ReportItems>
+              <Textbox Name="Textbox4">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Personnummer:</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>0.70584cm</Top>
+                <Left>0.00002cm</Left>
+                <Height>0.6cm</Height>
+                <Width>4.48437cm</Width>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox5">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Redovisningsenhet(-er):</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>1.41167cm</Top>
+                <Height>0.6cm</Height>
+                <Width>4.48437cm</Width>
+                <ZIndex>1</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox15">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Urval</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
                     <Style>
-                      <FontSize>8pt</FontSize>
+                      <TextAlign>Left</TextAlign>
                     </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.36536cm</Top>
-            <Left>0.00002cm</Left>
-            <Height>0.6cm</Height>
-            <Width>4.48437cm</Width>
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox14</rd:DefaultName>
+                <Left>0.00002cm</Left>
+                <Height>0.6cm</Height>
+                <Width>17.74221cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <TopBorder>
+                    <Color>Black</Color>
+                    <Style>Solid</Style>
+                    <Width>2pt</Width>
+                  </TopBorder>
+                  <BackgroundColor>LightGrey</BackgroundColor>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox7">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Join(Code.SortArr(Parameters!redovisningsenhet.Value), ", ")</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>1.41167cm</Top>
+                <Left>4.66078cm</Left>
+                <Height>0.6cm</Height>
+                <Width>13.08143cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox8">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>=Parameters!personnummer.Value</Value>
+                        <Style>
+                          <FontSize>8pt</FontSize>
+                        </Style>
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox1</rd:DefaultName>
+                <Top>0.70584cm</Top>
+                <Left>4.66078cm</Left>
+                <Height>0.6cm</Height>
+                <Width>13.08143cm</Width>
+                <ZIndex>4</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+            </ReportItems>
+            <KeepTogether>true</KeepTogether>
+            <Top>2.43099cm</Top>
+            <Left>0.00003cm</Left>
+            <Height>2.12958cm</Height>
+            <Width>17.74223cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
                 <Style>None</Style>
               </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
             </Style>
-          </Textbox>
-          <Textbox Name="Textbox5">
+          </Rectangle>
+          <Textbox Name="Textbox1">
             <CanGrow>true</CanGrow>
             <KeepTogether>true</KeepTogether>
             <Paragraphs>
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Redovisningsenhet(-er):</Value>
+                    <Value>=First(Fields!Meddelande.Value, "SokningReseinformation")</Value>
                     <Style>
                       <FontSize>8pt</FontSize>
+                      <Color>Red</Color>
                     </Style>
                   </TextRun>
                 </TextRuns>
@@ -736,9 +889,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.07119cm</Top>
+            <Top>0.10583cm</Top>
+            <Left>0.00005cm</Left>
             <Height>0.6cm</Height>
-            <Width>4.48437cm</Width>
+            <Width>17.74222cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -750,113 +904,11 @@
               <PaddingBottom>2pt</PaddingBottom>
             </Style>
           </Textbox>
-          <Textbox Name="Textbox15">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>Urval</Value>
-                    <Style />
-                  </TextRun>
-                </TextRuns>
-                <Style>
-                  <TextAlign>Left</TextAlign>
-                </Style>
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox14</rd:DefaultName>
-            <Top>3.65952cm</Top>
-            <Left>0.00002cm</Left>
-            <Height>0.6cm</Height>
-            <Width>17.74221cm</Width>
-            <ZIndex>3</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <TopBorder>
-                <Color>Black</Color>
-                <Style>Solid</Style>
-                <Width>2pt</Width>
-              </TopBorder>
-              <BackgroundColor>LightGrey</BackgroundColor>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox7">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Join(Parameters!redovisningsenhet.Value, ", ")</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>5.07119cm</Top>
-            <Left>4.66078cm</Left>
-            <Height>0.6cm</Height>
-            <Width>13.08146cm</Width>
-            <ZIndex>4</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
-          <Textbox Name="Textbox8">
-            <CanGrow>true</CanGrow>
-            <KeepTogether>true</KeepTogether>
-            <Paragraphs>
-              <Paragraph>
-                <TextRuns>
-                  <TextRun>
-                    <Value>=Parameters!personnummer.Value</Value>
-                    <Style>
-                      <FontSize>8pt</FontSize>
-                    </Style>
-                  </TextRun>
-                </TextRuns>
-                <Style />
-              </Paragraph>
-            </Paragraphs>
-            <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>4.36536cm</Top>
-            <Left>4.66078cm</Left>
-            <Height>0.6cm</Height>
-            <Width>13.08145cm</Width>
-            <ZIndex>5</ZIndex>
-            <Style>
-              <Border>
-                <Style>None</Style>
-              </Border>
-              <PaddingLeft>2pt</PaddingLeft>
-              <PaddingRight>2pt</PaddingRight>
-              <PaddingTop>2pt</PaddingTop>
-              <PaddingBottom>2pt</PaddingBottom>
-            </Style>
-          </Textbox>
         </ReportItems>
-        <Height>7.72917in</Height>
+        <Height>1.8609in</Height>
         <Style />
       </Body>
-      <Width>17.996cm</Width>
+      <Width>17.74227cm</Width>
       <Page>
         <PageHeader>
           <Height>1.77271cm</Height>
@@ -914,7 +966,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox16</rd:DefaultName>
               <Top>0.52599cm</Top>
-              <Left>12.57057cm</Left>
+              <Left>12.5706cm</Left>
               <Height>0.6cm</Height>
               <Width>5.17167cm</Width>
               <ZIndex>1</ZIndex>
@@ -935,6 +987,49 @@
             </Border>
           </Style>
         </PageHeader>
+        <PageFooter>
+          <Height>1cm</Height>
+          <PrintOnFirstPage>true</PrintOnFirstPage>
+          <PrintOnLastPage>true</PrintOnLastPage>
+          <ReportItems>
+            <Textbox Name="Textbox9">
+              <CanGrow>true</CanGrow>
+              <KeepTogether>true</KeepTogether>
+              <Paragraphs>
+                <Paragraph>
+                  <TextRuns>
+                    <TextRun>
+                      <Value>=String.Format("{0} / {1}", Globals!PageNumber.ToString(), Globals!TotalPages.ToString())</Value>
+                      <Style />
+                    </TextRun>
+                  </TextRuns>
+                  <Style>
+                    <TextAlign>Right</TextAlign>
+                  </Style>
+                </Paragraph>
+              </Paragraphs>
+              <rd:DefaultName>Textbox1</rd:DefaultName>
+              <Top>0.17639cm</Top>
+              <Left>15.24224cm</Left>
+              <Height>0.6cm</Height>
+              <Width>2.5cm</Width>
+              <Style>
+                <Border>
+                  <Style>None</Style>
+                </Border>
+                <PaddingLeft>2pt</PaddingLeft>
+                <PaddingRight>2pt</PaddingRight>
+                <PaddingTop>2pt</PaddingTop>
+                <PaddingBottom>2pt</PaddingBottom>
+              </Style>
+            </Textbox>
+          </ReportItems>
+          <Style>
+            <Border>
+              <Style>None</Style>
+            </Border>
+          </Style>
+        </PageFooter>
         <PageHeight>29.7cm</PageHeight>
         <PageWidth>21cm</PageWidth>
         <LeftMargin>1cm</LeftMargin>
@@ -949,15 +1044,16 @@
   <ReportParameters>
     <ReportParameter Name="personnummer">
       <DataType>String</DataType>
-      <DefaultValue>
-        <Values>
-          <Value>195902081636</Value>
-        </Values>
-      </DefaultValue>
-      <Prompt>Personnummer</Prompt>
+      <Prompt>Personnummer (ååååmmddnnnn)</Prompt>
     </ReportParameter>
     <ReportParameter Name="redovisningsenhet">
       <DataType>String</DataType>
+      <DefaultValue>
+        <DataSetReference>
+          <DataSetName>Redovisningsenheter</DataSetName>
+          <ValueField>Redovisningsnummer</ValueField>
+        </DataSetReference>
+      </DefaultValue>
       <Prompt>Redovisningsenhet(-er)</Prompt>
       <ValidValues>
         <DataSetReference>
@@ -970,11 +1066,43 @@
     </ReportParameter>
   </ReportParameters>
   <Code>Public _evenRow As Boolean
+
 Public Function EvenRow() As Boolean
     _evenRow = Not _evenRow
     return _evenRow
 End Function
-</Code>
+Public Function SortArr(ByVal arr() As Object) As Object()
+  Array.Sort(arr)
+  return arr
+End Function
+
+Function ValidatePersonnummer(input as String) As Boolean
+If	(String.IsNullOrEmpty(input)) Then
+		Return False
+	End If 
+	
+	If input.Length &lt;&gt; 12
+		Return False
+	Else
+		Dim i As Integer
+		Dim digit As Integer
+		Dim sum As Integer
+		sum = 0
+		i = 0 
+		For i = 2 to 11 Step 1			
+			digit = System.Integer.Parse(GetChar(input, (i + 1)))
+			If (i Mod 2) = 0 Then
+				digit = (digit * 2)
+			End If 
+			If (digit &gt; 9) Then
+				digit = (digit - 9)
+			End If 
+			sum = (sum + digit)
+		Next
+		
+		Return (sum Mod 10) = 0
+	End if
+End Function</Code>
   <Language>sv-SE</Language>
   <rd:ReportUnitType>Cm</rd:ReportUnitType>
   <rd:ReportID>55ead3a9-263c-4dde-866c-51b8694006cb</rd:ReportID>
