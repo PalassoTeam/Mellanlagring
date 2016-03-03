@@ -16,10 +16,6 @@
       <Name>ListaRedovisningsenheter.rsd</Name>
       <FullPath>ListaRedovisningsenheter.rsd</FullPath>
     </ProjectItem>
-    <ProjectItem>
-      <Name>ListaRedovisningsenheter2.rsd</Name>
-      <FullPath>ListaRedovisningsenheter2.rsd</FullPath>
-    </ProjectItem>
   </DataSets>
   <Reports>
     <ProjectItem>
