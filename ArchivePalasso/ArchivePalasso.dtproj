@@ -28,8 +28,8 @@
   </Configurations>
   <DTSPackages>
     <DtsPackage FormatVersion="3">
-      <Name>export_archive_files.dtsx</Name>
-      <FullPath>export_archive_files.dtsx</FullPath>
+      <Name>exportPalasso.dtsx</Name>
+      <FullPath>exportPalasso.dtsx</FullPath>
       <References />
     </DtsPackage>
   </DTSPackages>
