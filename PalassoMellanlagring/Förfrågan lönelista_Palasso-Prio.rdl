@@ -3,7 +3,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="Palasso">
-      <DataSourceReference>Palasso</DataSourceReference>
+      <DataSourceReference>Palasso-Prio</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>071ef73e-57aa-42e6-b793-2f63a1609049</rd:DataSourceID>
     </DataSource>
@@ -11,7 +11,7 @@
   <DataSets>
     <DataSet Name="Redovisningsenheter">
       <SharedDataSet>
-        <SharedDataSetReference>ListaRedovisningsenheter</SharedDataSetReference>
+        <SharedDataSetReference>ListaRedovisningsenheter_Palasso-Prio</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="Redovisningsnummer">
@@ -89,14 +89,14 @@
               </TablixColumns>
               <TablixRows>
                 <TablixRow>
-                  <Height>10.72968cm</Height>
+                  <Height>16.33689cm</Height>
                   <TablixCells>
                     <TablixCell>
                       <CellContents>
                         <Rectangle Name="Rectangle1">
                           <ReportItems>
                             <Subreport Name="Subreport1">
-                              <ReportName>Förfrågan lönelista - underrapport</ReportName>
+                              <ReportName>Förfrågan lönelista - underrapport_Palasso-Prio</ReportName>
                               <Parameters>
                                 <Parameter Name="personnummer">
                                   <Value>=Fields!Personnummer.Value</Value>
@@ -108,9 +108,9 @@
                                   <Value>=Fields!Löneperiod.Value</Value>
                                 </Parameter>
                               </Parameters>
-                              <Top>1.60101cm</Top>
-                              <Left>0.03531cm</Left>
-                              <Height>8.93051cm</Height>
+                              <Top>1.70684cm</Top>
+                              <Left>0.00006cm</Left>
+                              <Height>9.0934cm</Height>
                               <Width>18.60436cm</Width>
                               <Style>
                                 <Border>
@@ -562,7 +562,7 @@
             <DataSetName>ForfraganLoneLista</DataSetName>
             <Top>0.17639cm</Top>
             <Left>0.03834cm</Left>
-            <Height>10.72968cm</Height>
+            <Height>16.33689cm</Height>
             <Width>18.63968cm</Width>
             <Style>
               <Border>
@@ -814,7 +814,7 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>5.62175in</Height>
+        <Height>6.50129in</Height>
         <Style />
       </Body>
       <Width>18.67802cm</Width>

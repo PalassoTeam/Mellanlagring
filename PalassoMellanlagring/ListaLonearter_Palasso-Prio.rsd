@@ -2,17 +2,17 @@
 <SharedDataSet xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition">
   <DataSet Name="">
     <Query>
-      <DataSourceReference>Palasso</DataSourceReference>
+      <DataSourceReference>Palasso-Prio</DataSourceReference>
       <CommandType>StoredProcedure</CommandType>
-      <CommandText>spListaRedovisningsenheter</CommandText>
+      <CommandText>spListaLonearter</CommandText>
     </Query>
     <Fields>
-      <Field Name="Redovisningsnummer">
-        <DataField>Redovisningsnummer</DataField>
+      <Field Name="Löneart_Id">
+        <DataField>Löneart Id</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
-      <Field Name="Redovisningsenhet">
-        <DataField>Redovisningsenhet</DataField>
+      <Field Name="Löneart_beskrivning">
+        <DataField>Löneart beskrivning</DataField>
         <rd:TypeName>System.String</rd:TypeName>
       </Field>
     </Fields>

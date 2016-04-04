@@ -3,7 +3,7 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="Palasso">
-      <DataSourceReference>Palasso</DataSourceReference>
+      <DataSourceReference>Palasso-Prio</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>071ef73e-57aa-42e6-b793-2f63a1609049</rd:DataSourceID>
     </DataSource>
@@ -16,11 +16,11 @@
           <QueryParameter Name="@personnummer">
             <Value>=Parameters!personnummer.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@loneperiodfrom">
-            <Value>=Parameters!loneperiodfrom.Value</Value>
-          </QueryParameter>
           <QueryParameter Name="@redovisningsenhet">
             <Value>=Parameters!redovisningsenhet.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@loneperiodfrom">
+            <Value>=Parameters!loneperiodfrom.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@loneperiodtom">
             <Value>=Parameters!loneperiodtom.Value</Value>
@@ -42,10 +42,6 @@
           <DataField>Förnamn</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Löneart_Id">
-          <DataField>Löneart Id</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Redovisningsnummer">
           <DataField>Redovisningsnummer</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -54,25 +50,29 @@
           <DataField>Retrolöpnummer</DataField>
           <rd:TypeName>System.Int16</rd:TypeName>
         </Field>
-        <Field Name="Löneart_beskrivning">
-          <DataField>Löneart beskrivning</DataField>
+        <Field Name="Löneart_Id">
+          <DataField>Löneart Id</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Lönehändelse_from">
-          <DataField>Lönehändelse from</DataField>
+        <Field Name="Löneart_beskrivning">
+          <DataField>Löneart beskrivning</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Anställningslöpnummer">
           <DataField>Anställningslöpnummer</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
-        <Field Name="Lönehändelse_tom">
-          <DataField>Lönehändelse tom</DataField>
-          <rd:TypeName>System.String</rd:TypeName>
-        </Field>
         <Field Name="Antal">
           <DataField>Antal</DataField>
           <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="Lönehändelse_from">
+          <DataField>Lönehändelse from</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="Lönehändelse_tom">
+          <DataField>Lönehändelse tom</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
         </Field>
         <Field Name="Belopp">
           <DataField>Belopp</DataField>
@@ -86,7 +86,7 @@
     </DataSet>
     <DataSet Name="Redovisningsenheter">
       <SharedDataSet>
-        <SharedDataSetReference>ListaRedovisningsenheter</SharedDataSetReference>
+        <SharedDataSetReference>ListaRedovisningsenheter_Palasso-Prio</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="Redovisningsnummer">

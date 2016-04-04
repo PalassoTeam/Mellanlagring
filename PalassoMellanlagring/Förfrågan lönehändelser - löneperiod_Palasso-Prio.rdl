@@ -3,13 +3,13 @@
   <AutoRefresh>0</AutoRefresh>
   <DataSources>
     <DataSource Name="Palasso">
-      <DataSourceReference>Palasso</DataSourceReference>
+      <DataSourceReference>Palasso-Prio</DataSourceReference>
       <rd:SecurityType>None</rd:SecurityType>
       <rd:DataSourceID>071ef73e-57aa-42e6-b793-2f63a1609049</rd:DataSourceID>
     </DataSource>
   </DataSources>
   <DataSets>
-    <DataSet Name="ForfraganLonehandelserLonehandelse">
+    <DataSet Name="ForfraganLonehandelser">
       <Query>
         <DataSourceName>Palasso</DataSourceName>
         <QueryParameters>
@@ -19,18 +19,18 @@
           <QueryParameter Name="@redovisningsenhet">
             <Value>=Parameters!redovisningsenhet.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@lonehandelsefrom">
-            <Value>=Parameters!lonehandelsefrom.Value</Value>
+          <QueryParameter Name="@loneperiodfrom">
+            <Value>=Parameters!loneperiodfrom.Value</Value>
           </QueryParameter>
-          <QueryParameter Name="@lonehandelsetom">
-            <Value>=Parameters!lonehandelsetom.Value</Value>
+          <QueryParameter Name="@loneperiodtom">
+            <Value>=Parameters!loneperiodtom.Value</Value>
           </QueryParameter>
           <QueryParameter Name="@lonearter">
             <Value>=Parameters!lonearter.Value</Value>
           </QueryParameter>
         </QueryParameters>
         <CommandType>StoredProcedure</CommandType>
-        <CommandText>spForfraganLonehandelserLonehandelse</CommandText>
+        <CommandText>spForfraganLonehandelserLoneperiod</CommandText>
       </Query>
       <Fields>
         <Field Name="Personnummer">
@@ -113,7 +113,7 @@
     </DataSet>
     <DataSet Name="Redovisningsenheter">
       <SharedDataSet>
-        <SharedDataSetReference>ListaRedovisningsenheter</SharedDataSetReference>
+        <SharedDataSetReference>ListaRedovisningsenheter_Palasso-Prio</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="Redovisningsnummer">
@@ -128,7 +128,7 @@
     </DataSet>
     <DataSet Name="Lonearter">
       <SharedDataSet>
-        <SharedDataSetReference>ListaLonearter</SharedDataSetReference>
+        <SharedDataSetReference>ListaLonearter_Palasso-Prio</SharedDataSetReference>
       </SharedDataSet>
       <Fields>
         <Field Name="Löneart_Id">
@@ -153,19 +153,19 @@
                   <Width>2cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.09275cm</Width>
+                  <Width>4.34108cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.84667cm</Width>
+                  <Width>1.68792cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.15468cm</Width>
+                  <Width>1.12823cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.95725cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>4.06106cm</Width>
+                  <Width>3.98945cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.63542cm</Width>
@@ -174,7 +174,7 @@
                   <Width>1.63542cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.69083cm</Width>
+                  <Width>1.61146cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.99188cm</Width>
@@ -183,19 +183,19 @@
                   <Width>1.12417cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.52105cm</Width>
+                  <Width>1.30938cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>1.17708cm</Width>
+                  <Width>1.01833cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>0.95cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.9125cm</Width>
+                  <Width>0.75375cm</Width>
                 </TablixColumn>
                 <TablixColumn>
-                  <Width>0.93896cm</Width>
+                  <Width>0.72729cm</Width>
                 </TablixColumn>
                 <TablixColumn>
                   <Width>1.20354cm</Width>
@@ -1347,10 +1347,10 @@
               </TablixMembers>
             </TablixRowHierarchy>
             <RepeatRowHeaders>true</RepeatRowHeaders>
-            <DataSetName>ForfraganLonehandelserLonehandelse</DataSetName>
-            <Left>0.00848cm</Left>
+            <DataSetName>ForfraganLonehandelser</DataSetName>
+            <Left>0.01325cm</Left>
             <Height>1.1cm</Height>
-            <Width>27.89326cm</Width>
+            <Width>27.06457cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -1376,7 +1376,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>1.41755cm</Top>
+                <Top>1.59355cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.6cm</Height>
                 <Width>4.48437cm</Width>
                 <Style>
@@ -1406,8 +1407,7 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>0.70583cm</Top>
-                <Left>0.01697cm</Left>
+                <Top>0.88771cm</Top>
                 <Height>0.6cm</Height>
                 <Width>4.48437cm</Width>
                 <ZIndex>1</ZIndex>
@@ -1438,9 +1438,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox14</rd:DefaultName>
-                <Left>0.01699cm</Left>
+                <Top>0.18188cm</Top>
+                <Left>0.00002cm</Left>
                 <Height>0.6cm</Height>
-                <Width>27.90175cm</Width>
+                <Width>27.07782cm</Width>
                 <ZIndex>2</ZIndex>
                 <Style>
                   <Border>
@@ -1475,10 +1476,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>0.71171cm</Top>
-                <Left>4.66078cm</Left>
+                <Top>0.88771cm</Top>
+                <Left>4.6608cm</Left>
                 <Height>0.6cm</Height>
-                <Width>23.24097cm</Width>
+                <Width>22.41704cm</Width>
                 <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
@@ -1507,10 +1508,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>1.41755cm</Top>
-                <Left>4.66076cm</Left>
+                <Top>1.59355cm</Top>
+                <Left>4.66078cm</Left>
                 <Height>0.6cm</Height>
-                <Width>23.24097cm</Width>
+                <Width>22.41704cm</Width>
                 <ZIndex>4</ZIndex>
                 <Style>
                   <Border>
@@ -1529,7 +1530,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>Lönehändelsedatum:</Value>
+                        <Value>Löneperiod:</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                         </Style>
@@ -1539,8 +1540,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>2.15866cm</Top>
-                <Left>0.00844cm</Left>
+                <Top>2.33466cm</Top>
+                <Left>0.00846cm</Left>
                 <Height>0.6cm</Height>
                 <Width>4.48437cm</Width>
                 <ZIndex>5</ZIndex>
@@ -1561,7 +1562,7 @@
                   <Paragraph>
                     <TextRuns>
                       <TextRun>
-                        <Value>=Parameters!lonehandelsefrom.Value + " - " + Parameters!lonehandelsetom.Value</Value>
+                        <Value>=Parameters!loneperiodfrom.Value + " - " + Parameters!loneperiodtom.Value</Value>
                         <Style>
                           <FontSize>8pt</FontSize>
                         </Style>
@@ -1571,10 +1572,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>2.15866cm</Top>
-                <Left>4.66922cm</Left>
+                <Top>2.33466cm</Top>
+                <Left>4.66924cm</Left>
                 <Height>0.6cm</Height>
-                <Width>23.24099cm</Width>
+                <Width>22.41706cm</Width>
                 <ZIndex>6</ZIndex>
                 <Style>
                   <Border>
@@ -1603,8 +1604,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>2.87625cm</Top>
-                <Left>0.00844cm</Left>
+                <Top>3.05225cm</Top>
+                <Left>0.00846cm</Left>
                 <Height>0.6cm</Height>
                 <Width>4.48437cm</Width>
                 <ZIndex>7</ZIndex>
@@ -1635,10 +1636,10 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox1</rd:DefaultName>
-                <Top>2.88213cm</Top>
-                <Left>4.66922cm</Left>
+                <Top>3.05813cm</Top>
+                <Left>4.66924cm</Left>
                 <Height>0.6cm</Height>
-                <Width>23.24099cm</Width>
+                <Width>22.41706cm</Width>
                 <ZIndex>8</ZIndex>
                 <Style>
                   <Border>
@@ -1651,10 +1652,9 @@
                 </Style>
               </Textbox>
             </ReportItems>
-            <KeepTogether>true</KeepTogether>
-            <Top>2.00766cm</Top>
-            <Height>3.55833cm</Height>
-            <Width>27.91874cm</Width>
+            <Top>1.95474cm</Top>
+            <Height>3.77cm</Height>
+            <Width>27.0863cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -1663,10 +1663,10 @@
             </Style>
           </Rectangle>
         </ReportItems>
-        <Height>2.28169in</Height>
+        <Height>2.3546in</Height>
         <Style />
       </Body>
-      <Width>27.91874cm</Width>
+      <Width>27.08631cm</Width>
       <Page>
         <PageHeader>
           <Height>1.77271cm</Height>
@@ -1680,7 +1680,7 @@
                 <Paragraph>
                   <TextRuns>
                     <TextRun>
-                      <Value>Lönehändelser (lönehändelsedatum)</Value>
+                      <Value>Lönehändelser (löneperiod)</Value>
                       <Style />
                     </TextRun>
                   </TextRuns>
@@ -1691,7 +1691,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox14</rd:DefaultName>
               <Top>0.52599cm</Top>
-              <Left>11.06818cm</Left>
+              <Left>11.07295cm</Left>
               <Height>0.6cm</Height>
               <Width>6.32355cm</Width>
               <Style>
@@ -1724,7 +1724,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox16</rd:DefaultName>
               <Top>0.52599cm</Top>
-              <Left>22.73006cm</Left>
+              <Left>21.91463cm</Left>
               <Height>0.6cm</Height>
               <Width>5.17167cm</Width>
               <ZIndex>1</ZIndex>
@@ -1768,7 +1768,7 @@
               </Paragraphs>
               <rd:DefaultName>Textbox1</rd:DefaultName>
               <Top>0.17639cm</Top>
-              <Left>25.40173cm</Left>
+              <Left>24.5863cm</Left>
               <Height>0.6cm</Height>
               <Width>2.5cm</Width>
               <Style>
@@ -1823,13 +1823,13 @@
       </ValidValues>
       <MultiValue>true</MultiValue>
     </ReportParameter>
-    <ReportParameter Name="lonehandelsefrom">
+    <ReportParameter Name="loneperiodfrom">
       <DataType>String</DataType>
-      <Prompt>Lönehändelsedatum fr.o.m.</Prompt>
+      <Prompt>Löneperiod fr.o.m. (ååmm)</Prompt>
     </ReportParameter>
-    <ReportParameter Name="lonehandelsetom">
+    <ReportParameter Name="loneperiodtom">
       <DataType>String</DataType>
-      <Prompt>Lönehändelse t.o.m.</Prompt>
+      <Prompt>Löneperiod t.o.m. (ååmm)</Prompt>
     </ReportParameter>
     <ReportParameter Name="lonearter">
       <DataType>String</DataType>

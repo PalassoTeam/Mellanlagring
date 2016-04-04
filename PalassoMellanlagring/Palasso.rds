@@ -2,7 +2,8 @@
 <RptDataSource xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Palasso">
   <ConnectionProperties>
     <Extension>SQL</Extension>
-    <ConnectString>Data Source=83.174.85.79;Initial Catalog=Palasso</ConnectString>
+    <ConnectString>Data Source=83.174.85.79;Initial Catalog=Palasso_Prio</ConnectString>
+    <Prompt>Specify a user name and password for data source Palasso-Prio:</Prompt>
   </ConnectionProperties>
-  <DataSourceID>5e21a49a-03de-4671-824e-27b770a5cb84</DataSourceID>
+  <DataSourceID>0530f029-a678-495f-9b58-33ef0269b140</DataSourceID>
 </RptDataSource>
